@@ -3,8 +3,12 @@ package com.mthaler.springhibernate.dao
 import com.mthaler.springhibernate.entities.Instrument
 import org.apache.commons.logging.LogFactory
 import org.hibernate.SessionFactory
+import org.springframework.stereotype.Repository
+import org.springframework.transaction.annotation.Transactional
 import javax.annotation.Resource
 
+@Transactional
+@Repository("instrumentDao")
 class InstrumentDaoImpl: InstrumentDao {
 
     private lateinit var sessionFactory: SessionFactory
