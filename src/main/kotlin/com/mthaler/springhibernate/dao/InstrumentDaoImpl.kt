@@ -14,8 +14,8 @@ class InstrumentDaoImpl: InstrumentDao {
     }
 
     @Resource(name = "sessionFactory")
-    fun setSessionFactory(sessionFactory: SessionFactory?) {
-        this.sessionFactory = sessionFactory!!
+    fun setSessionFactory(sessionFactory: SessionFactory) {
+        this.sessionFactory = sessionFactory
     }
 
     override fun save(instrument: Instrument): Instrument {
