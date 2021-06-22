@@ -35,9 +35,9 @@ class SingerDaoImpl: SingerDao {
     }
 
     @Transactional(readOnly = true)
-    override fun findById(id: Long): Singer {
+    override fun findById(id: Long): Singer? {
         return sessionFactory.currentSession.getNamedQuery("Singer.findById").setParameter("id", id)
-            .uniqueResult() as Singer
+            .uniqueResult() as Singer?
     }
 
     override fun save(singer: Singer): Singer {

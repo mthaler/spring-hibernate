@@ -55,6 +55,7 @@ class AdvancedConfig {
     private fun hibernateProperties(): Properties {
         val hibernateProp = Properties()
         hibernateProp["hibernate.dialect"] = "org.hibernate.dialect.PostgreSQL9Dialect"
+        hibernateProp["hibernate.hbm2ddl.auto"] = "create-drop"
         hibernateProp["hibernate.format_sql"] = true
         hibernateProp["hibernate.use_sql_comments"] = true
         hibernateProp["hibernate.show_sql"] = true

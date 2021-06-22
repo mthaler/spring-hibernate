@@ -7,7 +7,7 @@ interface SingerDao {
 
     fun findAllWithAlbum(): List<Singer>
 
-    fun findById(id: Long): Singer
+    fun findById(id: Long): Singer?
 
     fun save(singer: Singer): Singer
 
