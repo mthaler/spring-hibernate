@@ -3,7 +3,6 @@ package com.mthaler.springhibernate.entities
 import java.io.Serializable
 import javax.persistence.*
 
-
 @MappedSuperclass
 abstract class AbstractEntity: Serializable {
 

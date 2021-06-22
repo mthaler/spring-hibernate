@@ -1,10 +1,11 @@
 package com.mthaler.springhibernate.entities
 
+import java.io.Serializable
 import javax.persistence.*
 
 @Entity
 @Table(name = "instrument")
-class Instrument : AbstractEntity() {
+class Instrument : Serializable {
 
     @Id
     @Column(name = "INSTRUMENT_ID")

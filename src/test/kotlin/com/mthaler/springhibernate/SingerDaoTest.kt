@@ -19,18 +19,7 @@ import java.sql.Date
 import java.util.*
 import java.util.function.Consumer
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class SingerDaoTest {
-
-    private lateinit var ctx: GenericApplicationContext
-    private lateinit var singerDao: SingerDao
-
-    @BeforeAll
-    fun setUp() {
-        ctx = AnnotationConfigApplicationContext(AdvancedConfig::class.java)
-        singerDao = ctx.getBean(SingerDao::class.java)
-        assertNotNull(singerDao)
-    }
 
     @Test
     fun testFindAll() {
@@ -104,14 +93,27 @@ class SingerDaoTest {
         listSingersWithAlbum(singerDao.findAllWithAlbum())
     }
 
-    @AfterAll
-    fun tearDown() {
-        ctx.close()
-    }
-
     companion object {
 
         private val logger: Logger = LoggerFactory.getLogger(SingerDaoTest::class.java)
+
+        private lateinit var ctx: GenericApplicationContext
+        private lateinit var singerDao: SingerDao
+
+        @JvmStatic
+        @BeforeAll
+        fun setUp() {
+            ctx = AnnotationConfigApplicationContext(AdvancedConfig::class.java)
+            singerDao = ctx.getBean(SingerDao::class.java)
+            assertNotNull(singerDao)
+        }
+
+        @JvmStatic
+        @AfterAll
+        fun tearDown() {
+            ctx.close()
+        }
+
 
         private fun listSingers(singers: List<Singer>) {
             logger.info(" ---- Listing singers:")
