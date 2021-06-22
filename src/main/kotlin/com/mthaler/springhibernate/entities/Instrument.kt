@@ -4,7 +4,7 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "instrument")
-class Instrument {
+class Instrument : AbstractEntity() {
 
     @Id
     @Column(name = "INSTRUMENT_ID")

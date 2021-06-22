@@ -18,7 +18,7 @@ import kotlin.collections.HashSet
                 "left join fetch s.albums a " +
                 "left join fetch s.instruments i")
 )
-class Singer(): AbstractEntity() {
+class Singer: AbstractEntity() {
 
     @Column(name = "FIRST_NAME")
     var firstName: String? = null

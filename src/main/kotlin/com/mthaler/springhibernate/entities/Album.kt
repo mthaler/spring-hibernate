@@ -6,7 +6,7 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "album")
-class Album() : AbstractEntity() {
+class Album : AbstractEntity() {
 
     @Column
     var title: String? = null

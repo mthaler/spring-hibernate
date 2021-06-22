@@ -67,7 +67,7 @@ class AdvancedConfig {
     @Bean
     fun sessionFactory(): SessionFactory {
         return LocalSessionFactoryBuilder(dataSource())
-            .scanPackages("com.apress.prospring5.ch7.entities")
+            .scanPackages("com.mthaler.springhibernate.entities")
             .addProperties(hibernateProperties())
             .buildSessionFactory()
     }
