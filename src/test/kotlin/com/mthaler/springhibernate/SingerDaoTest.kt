@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.TestInstance
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.context.annotation.AnnotationConfigApplicationContext
@@ -18,6 +19,7 @@ import java.sql.Date
 import java.util.*
 import java.util.function.Consumer
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class SingerDaoTest {
 
     private lateinit var ctx: GenericApplicationContext
