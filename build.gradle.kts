@@ -18,6 +18,7 @@ repositories {
 dependencies {
 	implementation("org.springframework:spring-context:5.3.8")
 	implementation("org.springframework:spring-jdbc:5.3.8")
+	implementation("org.slf4j:slf4j-api:1.7.31")
 	implementation("ch.qos.logback:logback-classic:1.3.0-alpha5")
 	implementation("javax.annotation:javax.annotation-api:1.3.2")
 	implementation("org.apache.commons:commons-dbcp2:2.8.0")
@@ -25,7 +26,6 @@ dependencies {
 	implementation("org.springframework:spring-orm:5.3.8")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-	implementation("junit:junit:4.13.1")
 	runtimeOnly("org.postgresql:postgresql")
 	testImplementation(kotlin("test"))
 }
