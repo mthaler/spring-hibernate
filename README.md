@@ -56,7 +56,7 @@ To create the musicdb database, run the follwing command:
 $ createdb -O musicdb musicdb 
 ```
 
-## Create tables and stored functions
+## Create tables
 
 The Spring Hibernate example will automatically create tables before running the test and drop them after running the tests.
 It will also add test data to the tables.
