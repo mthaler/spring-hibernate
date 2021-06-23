@@ -38,8 +38,7 @@ class SingerDaoTest {
     fun testFindByID() {
         val singer = singerDao.findById(1L)
         assertNotNull(singer)
-        //logger.info(singer.toString())
-        println(singer)
+        logger.info(singer.toString())
     }
 
     @Test
@@ -84,7 +83,7 @@ class SingerDaoTest {
             singerDao.save(singer)
             listSingersWithAlbum(singerDao.findAllWithAlbum())
         } else {
-            println("SINGER NULL!!!")
+            logger.error("SINGER NULL!!!")
         }
     }
 
@@ -97,7 +96,7 @@ class SingerDaoTest {
             singerDao.delete(singer)
             listSingersWithAlbum(singerDao.findAllWithAlbum())
         } else {
-            println("SINGER NULL!!!")
+            logger.error("SINGER NULL!!!")
         }
     }
 
@@ -126,8 +125,7 @@ class SingerDaoTest {
         private fun listSingers(singers: List<Singer>) {
             logger.info(" ---- Listing singers:")
             for (singer in singers) {
-                //logger.info(singer.toString())
-                println(singer)
+                logger.info(singer.toString())
             }
         }
 
@@ -140,8 +138,7 @@ class SingerDaoTest {
                 }
                 if (s.instruments != null) {
                     s.instruments.forEach(Consumer { i: Instrument ->
-                        //logger.info("\tInstrument: " + i.instrumentId)
-                        println("\tInstrument: " + i.instrumentId)
+                        logger.info("\tInstrument: " + i.instrumentId)
                     })
                 }
             })
