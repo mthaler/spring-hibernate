@@ -1,1 +1,1 @@
-rootProject.name = "spring-hibernate"
+rootProject.name = "spring-data-jpa"
